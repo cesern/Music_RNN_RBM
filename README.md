@@ -11,8 +11,11 @@ RBM es una red neuronal con 2 capas, la capa visible y la capa oculta. Cada nodo
 Una RBM es capaz de modelar una distribución de probabilidad dimensional alta y compleja a partir de la cual podemos generar notas musicales.
 ## Las RNN-RBM
 La RNN-RBM es un modelo generativo no supervisado. Esto significa que el objetivo del algoritmo es modelar directamente la distribución de probabilidad de un conjunto de datos sin etiquetar. Podemos pensar en el RNN-RBM como una serie de máquinas Boltzmann restringidas cuyos parámetros están determinados por un RNN.
+
 En el RNN-RBM, las unidades ocultas de RNN comunican información sobre el acorde que se está reproduciendo o el estado de ánimo de la canción a los RBM. Esta información condiciona las distribuciones de probabilidad de RBM, para que la red pueda modelar la forma en que las notas cambian a lo largo de una canción.
+
 La arquitectura de la RNN-RBM no es tremendamente complicada. Cada unidad oculta de RNN se empareja con un RBM. La unidad oculta RNN toma la entrada del vector de datos (la nota o notas en un tiempo t), así como la unidad oculta RNN anterior. Las salidas de la unidad oculta son los parámetros de la RBM siguiente, que toma como vector de datos de entrada `v` en el tiempo siguiente.
+
 Todos los RBMs comparten la misma matriz de pesos, y solo los vectores bias ocultos y visibles están determinados por las salidas de las unidades RNN. Con esta convención, el rol de la matriz de peso RBM es especificar un previo consistente en todas las distribuciones RBM (la estructura general de la música), y el rol de los vectores bias es comunicar información temporal (el estado actual de la canción).
 ## Uso
 ### Entrenamiento
