@@ -42,6 +42,12 @@ El formato de datos es archivos de piano midi. Para el entrenamiento use 173 arc
 * [Resultado 2 con 500 epoch](results/1_resultado_500.mid)
 * [Resultado 3 con 500 epoch](results/2_resultado_500.mid)
 
+## Conclusión
+
+En general fue un proyecto sencillo de entender, de entrenar, y generar la música. El tiempo de entrenamiento fue relativamente rápido, con 173 muestras de archivos midi y 500 epoch el tiempo fue alrededor de 2 horas y la generación de la musica fue tambien rápida.
+
+Algo a comentar es que influyen mucho los datos de entrenamiento y la cantidad porque entrene con unos pocos y distintos archivos midi y algunos resultados eran muy malos. Cuando entrené con el conjunto de _Bash_ obtuve los mejores resultados de todos los que entrené.
+
 ## Uso
 ### Entrenamiento
 Para entrenar el modelo, primero ejecutar el siguiente comando para iniciar los parametros de la RBM.
