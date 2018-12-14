@@ -19,7 +19,7 @@ import midi_manipulation
 
 
 num = 3 #The number of songs to generate
-primer_song = 'Pop_Music_Midi/Every Time We Touch - Chorus.midi' #The path to the song to use to prime the network
+primer_song = 'bach/pre1.mid' #The path to the song to use to prime the network
 
 def main(saved_weights_path):
     #This function takes as input the path to the weights of the network
@@ -38,7 +38,7 @@ def main(saved_weights_path):
         # #We generate num songs
         for i in tqdm(range(num)):
             generated_music = sess.run(generate(300), feed_dict={x: song_primer}) #Prime the network with song primer and generate an original song
-            new_song_path = "music_outputs/{}_{}".format(i, primer_song.split("/")[-1]) #The new song will be saved here
+            new_song_path = "results/{}_{}".format(i, primer_song.split("/")[-1]) #The new song will be saved here
             midi_manipulation.write_song(new_song_path, generated_music)
 
 if __name__ == "__main__":
