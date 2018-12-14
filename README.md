@@ -33,6 +33,10 @@ Todos los RBMs comparten la misma matriz de pesos, y solo los vectores bias ocul
 
 El formato de datos es archivos de piano midi. Para el entrenamiento use 173 archivos midi de Johann Sebastian Bach ([Descargar](http://www.bachcentral.com/midiindexcomplete.html)).
 
+## Resultados
+
+
+
 ## Uso
 ### Entrenamiento
 Para entrenar el modelo, primero ejecutar el siguiente comando para iniciar los parametros de la RBM.
