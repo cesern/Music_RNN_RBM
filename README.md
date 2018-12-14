@@ -51,5 +51,3 @@ python rnn_rbm_generate.py <path_to_ckpt_file>
 Cuando ejecutas `train_rnn_rbm.py`, se crea `epoch_<x>.ckpt` en el directorio _parameter_checkpoints_. Comando de ejemplo: `python rnn_rbm_generate.py epoch_100.ckpt`.
 
 ___
-[[project_screenshots]]
-
