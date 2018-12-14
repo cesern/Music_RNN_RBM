@@ -35,7 +35,12 @@ El formato de datos es archivos de piano midi. Para el entrenamiento use 173 arc
 
 ## Resultados
 
-
+* [Resultado 1 con 100 epoch](results/0_resultado_100.mid)
+* [Resultado 2 con 100 epoch](results/1_resultado_100.mid)
+* [Resultado 3 con 100 epoch](results/2_resultado_100.mid)
+* [Resultado 1 con 500 epoch](results/0_resultado_500.mid)
+* [Resultado 2 con 500 epoch](results/1_resultado_500.mid)
+* [Resultado 3 con 500 epoch](results/2_resultado_500.mid)
 
 ## Uso
 ### Entrenamiento
