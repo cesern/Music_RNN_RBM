@@ -18,9 +18,21 @@ En el RNN-RBM, las unidades ocultas de RNN comunican información sobre el acord
 
 La arquitectura de la RNN-RBM no es tremendamente complicada. Cada unidad oculta de RNN se empareja con un RBM. La unidad oculta RNN toma la entrada del vector de datos (la nota o notas en un tiempo t), así como la unidad oculta RNN anterior. Las salidas de la unidad oculta son los parámetros de la RBM siguiente, que toma como vector de datos de entrada `v` en el tiempo siguiente.
 
-![rbm](images/RNNRBM.png)
+![rnn](images/RNNRBM.png)
 
 Todos los RBMs comparten la misma matriz de pesos, y solo los vectores bias ocultos y visibles están determinados por las salidas de las unidades RNN. Con esta convención, el rol de la matriz de peso RBM es especificar un previo consistente en todas las distribuciones RBM (la estructura general de la música), y el rol de los vectores bias es comunicar información temporal (el estado actual de la canción).
+
+## Entrenamiento
+
+1. En el primer paso, comunicamos los conocimientos de RNN sobre el estado actual de la canción a la RBM
+2. En el segundo paso creamos unas pocas notas musicales con el RBM.
+3. En el tercer paso, comparamos las notas que generamos con las notas reales de la canción en el tiempo t. Luego, propagamos esta pérdida a través de la red para calcular los gradientes de los parámetros de la red y actualizar los pesos y sesgos de la red. En la práctica, TensorFlow manejará los pasos de backpropagation y update.
+4. En el cuarto paso, utilizamos la nueva información para actualizar la representación interna de RNN del estado de la canción.
+
+## Datos
+
+El formato de datos es archivos de piano midi. Para el entrenamiento use 173 archivos midi de Johann Sebastian Bach ([Descargar](http://www.bachcentral.com/midiindexcomplete.html)).
+
 ## Uso
 ### Entrenamiento
 Para entrenar el modelo, primero ejecutar el siguiente comando para iniciar los parametros de la RBM.
