@@ -1,5 +1,8 @@
 # Generando música de piano con RNN-RBM
-Generador de música polifonica con RNN-RBM en TensorFlow, fork de [Music-Generation](https://github.com/cesern/Music_RNN_RBM).
+Generador de música polifonica con RNN-RBM en TensorFlow, fork de [Music_RNN_RBM](https://github.com/cesern/Music_RNN_RBM) de [Dan Shiebler](https://github.com/dshieble).
+
+##  Las RNN
+Una red neuronal recurrente es una arquitectura de red neuronal que puede manejar secuencias de vectores. Esto lo hace perfecto para trabajar con datos temporales. Por ejemplo, los RNN son excelentes en tareas como predecir la siguiente palabra en una oración o pronosticar una serie de tiempo.
 
 ## Uso
 ### Entrenamiento
