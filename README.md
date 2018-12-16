@@ -49,6 +49,17 @@ En general fue un proyecto sencillo de entender, de entrenar, y generar la músi
 Algo a comentar es que influyen mucho los datos de entrenamiento y la cantidad porque entrene con unos pocos y distintos archivos midi y algunos resultados eran muy malos. Cuando entrené con el conjunto de _Bash_ obtuve los mejores resultados de todos los que entrené.
 
 ## Uso
+### Dependencias
+Esta hecho con python 2.7.
+```
+    sudo apt-get install timidity
+
+    sudo apt-get install ffmpeg
+
+    sudo pip install python-midi numpy msgpack tqdm tensorflow
+
+    sudo pip install msgpack
+```    
 ### Entrenamiento
 Para entrenar el modelo, primero ejecutar el siguiente comando para iniciar los parametros de la RBM.
 ```
